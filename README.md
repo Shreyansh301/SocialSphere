@@ -28,7 +28,7 @@ User Discovery:
 ### Backend started
 <img width="1440" alt="backend_started" src="https://github.com/user-attachments/assets/8f167dab-d6d1-4f8a-b433-c26dcc8d8cc5" />
 
-### Fontend started
+### Frontend started
 <img width="1440" alt="frontend_started" src="https://github.com/user-attachments/assets/b4b65db6-ddb0-43f3-b479-58b4d17ad24d" />
 
 ### Login
