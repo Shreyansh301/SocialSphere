@@ -23,6 +23,13 @@ User Discovery:
 
 - Users can see all registered users on the platform (excluding themselves).
 
+## Live Link 
+## [Social Sphere](https://social-sphere-vert.vercel.app/)
+
+## Demo Login Details
+- **Email:** test@example.com  
+- **Password:** password123
+
 ## Screenhsots
 
 ### Backend started
