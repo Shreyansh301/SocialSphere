@@ -116,7 +116,8 @@ export default function Login() {
   
     try {
       // Send a POST request to the /login endpoint
-      const response = await fetch("http://localhost:8000/login", {
+      // const response = await fetch("http://localhost:8000/login"
+      const response = await fetch("https://socialspherebackend-production.up.railway.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

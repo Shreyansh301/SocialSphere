@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -25,7 +25,8 @@ export default function Register() {
 
     try {
       // Send a POST request to the /register endpoint
-      const response = await fetch("http://localhost:8000/register", {
+      // const response = await fetch("http://localhost:8000/register"
+      const response = await fetch("https://socialspherebackend-production.up.railway.app/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +52,7 @@ export default function Register() {
       setError("Something went wrong, please try again later");
     }
   };
-
+  
   return (
     <div className="flex justify-center items-center h-screen bg-black">
       <div className="bg-white p-8 rounded shadow-md w-96">
