@@ -24,7 +24,8 @@ export default function PostsPage() {
 
   const fetchPosts = async (userName: string) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/posts?username=${userName}`);
+      //http://localhost:8000
+      const response = await fetch(`https://socialspherebackend-production.up.railway.app/api/posts?username=${userName}`);
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || "Failed to fetch posts");
@@ -47,7 +48,8 @@ export default function PostsPage() {
 
     try {
       const userName = localStorage.getItem("userName");
-      const response = await fetch(`http://localhost:8000/api/posts/${postId}/comments`, {
+      ////http://localhost:8000
+      const response = await fetch(`https://socialspherebackend-production.up.railway.app/api/posts/${postId}/comments`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
