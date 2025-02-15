@@ -26,8 +26,9 @@ export default function FriendRequestPage() {
 
   const fetchFriendRequests = async (userName: string) => {
     try {
+      //http://localhost:8000/
       const response = await fetch(
-        `http://localhost:8000/api/friend-requests?username=${userName}`
+        `https://socialspherebackend-production.up.railway.app/api/friend-requests?username=${userName}` 
       );
       if (!response.ok) {
         const errorData = await response.json();
@@ -46,7 +47,8 @@ export default function FriendRequestPage() {
   const handleAcceptRequest = async (senderUsername: string) => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/accept-friend-request",
+        //http://localhost:8000/
+        "https://socialspherebackend-production.up.railway.app/api/accept-friend-request",
         {
           method: "POST",
           headers: {
@@ -76,7 +78,8 @@ export default function FriendRequestPage() {
   const handleRejectRequest = async (senderUsername: string) => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/reject-friend-request",
+        //http://localhost:8000/
+        "https://socialspherebackend-production.up.railway.app/api/reject-friend-request",
         {
           method: "POST",
           headers: {
