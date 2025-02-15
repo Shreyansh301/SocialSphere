@@ -26,7 +26,8 @@ export default function ViewFriendsPage() {
 
   const fetchFriends = async (userName: string) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/friends?username=${userName}`);
+      //http://localhost:8000/
+      const response = await fetch(`https://socialspherebackend-production.up.railway.app/api/friends?username=${userName}`);
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || "Failed to fetch friends");
@@ -43,7 +44,8 @@ export default function ViewFriendsPage() {
 
   const handleRemoveFriend = async (friendUsername: string) => {
     try {
-      const response = await fetch("http://localhost:8000/api/remove-friend", {
+      //http://localhost:8000/
+      const response = await fetch("https://socialspherebackend-production.up.railway.app/api/remove-friend", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
