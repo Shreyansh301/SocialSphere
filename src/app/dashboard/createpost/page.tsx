@@ -26,7 +26,8 @@ export default function CreatePostPage() { // Renamed from Dashboard to CreatePo
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/posts", {
+      //http://localhost:8000
+      const response = await fetch("https://socialspherebackend-production.up.railway.app/api/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
