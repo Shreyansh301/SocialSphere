@@ -107,7 +107,8 @@ export default function UserPage() {
   const fetchUsers = async (userName: string) => {
     try {
       // Pass the logged-in user's username as a query parameter
-      const response = await fetch(`http://localhost:8000/api/users?username=${userName}`);
+      //const response = await fetch(`http://localhost:8000/api/users?username=${userName}`
+      const response = await fetch(`https://socialspherebackend-production.up.railway.app/api/users?username=${userName}`);
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || "Failed to fetch users");
@@ -131,8 +132,9 @@ export default function UserPage() {
       if (!senderUsername) {
         throw new Error("You must be logged in to send a friend request.");
       }
-
-      const response = await fetch("http://localhost:8000/api/friend-request", {
+      
+      //const response = await fetch("http://localhost:8000/api/friend-request",
+      const response = await fetch("https://socialspherebackend-production.up.railway.app/api/friend-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
